@@ -8,14 +8,21 @@ header {
     right: 0px;
 }
 
+h1 {
+    position: absolute;
+    display: inline-block;
+    left: 120px;
+    top: 150px;
+}
+
 #header-line {
     position: fixed;
-    width: 96%;
+    width: 82%;
     border-width: 1px;
     border-style: solid;
     border-color: white;
     top: 70px;
-    left: 2%;
+    left: 16%;
 }
 
 .hamburguer {
@@ -23,7 +30,7 @@ header {
     margin: 10px;
     color: white;
     top: 20px;
-    left: 30px;
+    left: 16%;
 }
 
 aside {
@@ -39,11 +46,7 @@ main {
     position: absolute;
     z-index: -1;
     top: 110px;
-    left: 17%;
-}
-
-footer {
-
+    margin-left: 16.1%;
 }
 
 h3 {
@@ -68,6 +71,7 @@ h3 {
     position: relative;
     margin-top: 10px;
     margin-bottom: 10px;
+    right: 10px;
 }
 
 .functionalities {
@@ -75,17 +79,25 @@ h3 {
     margin-top: 10px;
     margin-bottom: 10px;
     text-align: center;
+    right: 10px;
 }
 
 #hear-text {
-    position: relative;
-    left: 10%;
-    text-align: left;
+    position: absolute;
+    display: inline-block;
+    width: 40%;
+    text-align: center;
     margin: 40px;
 }
 
 form {
+    position: relative;
+    display: inline-block;
+    width: 40%;
+    left: 800px;
     text-align: center;
+    border-left-width: 3px;
+    border-style: solid;
 }
 
 .functionalities-logo {
@@ -121,10 +133,8 @@ form {
     position: relative;
     display: inline-block;
     width: 40%;
-    margin-left: 20px;
-    margin-right: 20px;
-    top: -200px;
-    right: -100px;
+    margin-left: 120px;
+    bottom: 200px;
 }
 
 #letter-logo {
@@ -168,9 +178,9 @@ form {
 }
 
 #search {
-    position: relative;
+    position: fixed;
     display: inline-block;
-    margin-top: 35px;
+    top: 40px;
     margin-left: 35px;
 }
 
@@ -183,12 +193,13 @@ form {
 
 .vertical {
     position: relative;
-    float: right;
+
     display: inline-block;
     width: 50%;
     margin: 30px;
     top: -790px;
-    right: -135px;
+    right: -20px;
+    margin-left: 770px;
 }
 
 .text-vertical {
@@ -202,15 +213,125 @@ form {
     display: inline-block;
     width: 30%;
     margin-top: 70px;
-    margin-bottom: 70px;
-    left: 100px;
+    margin-bottom: 60px;
+    left: 10px;
+    border-style: solid;
+    border-right-width: 3px;
+    padding-right: 280px;
 }
 
-#vertical-line {
+#why-tittle {
+    position: absolute;
+    top: 1400px;
+    left: 600px;
+    z-index: 1;
+}
+
+#menu {
+    position: fixed;
     display: inline-block;
-    height: 200px;
-    width: 1px;
-    border-width: 1px;
     border-style: solid;
-    border-color: black;
+    color: white;
+    width: 200px;
+    border-width: 1px;
+    margin-top: 10px;
+    margin-left: 25px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+}
+
+#home {
+    position: fixed;
+    display: inline-block;
+    border-style: solid;
+    color: white;
+    width: 200px;
+    border-width: 1px;
+    margin-top: 50px;
+    margin-left: 25px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+}
+
+#singup {
+    position: fixed;
+    display: inline-block;
+    border-style: solid;
+    color: white;
+    width: 200px;
+    border-width: 1px;
+    margin-top: 90px;
+    margin-left: 25px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+}
+
+#login {
+    position: fixed;
+    display: inline-block;
+    border-style: solid;
+    color: white;
+    width: 200px;
+    border-width: 1px;
+    margin-top: 130px;
+    margin-left: 25px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+}
+
+#contact {
+    position: fixed;
+    display: inline-block;
+    border-style: solid;
+    color: white;
+    width: 200px;
+    border-width: 1px;
+    margin-top: 170px;
+    margin-left: 25px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+}
+
+#get {
+    position: fixed;
+    display: inline-block;
+    border-style: solid;
+    color: white;
+    width: 200px;
+    border-width: 1px;
+    margin-top: 330px;
+    margin-left: 25px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+}
+
+#text-sidebar {
+    position: fixed;
+    display: inline-block;
+    width: 230px;
+    color: white;
+    margin-top: 370px;
+    margin-left: 25px;
+}
+
+#info {
+    position: fixed;
+    display: inline-block;
+    width: 230px;
+    color: white;
+    margin-top: 670px;
+    margin-left: 25px;
+}
+
+
+#learn-more {
+    position: relative;
+    left: 120px;
+    bottom: 180px;
 }
