@@ -39,3 +39,45 @@ nav {
 .hamburguer {
     color: white;
 }
+
+@media screen and (min-width: 1000px) {
+    header {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 84%;
+        height: 100px;
+        margin-left: 16%;
+        z-index: 1;
+        font-family: 'Roboto', sans-serif;
+        background-color: #373867;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        border-width: 1px;
+        border-style: solid;
+        border-top: 0px;
+        border-left: 0px;
+        border-right: 0px;
+        border-color: white;
+    }
+
+    #title-header {
+        text-align: center;
+        color: white;
+    }
+
+    #logos-header {
+        display: inline-block;
+
+    }
+
+    .hamburguer {
+        color: white;
+    }
+}
