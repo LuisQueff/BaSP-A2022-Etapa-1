@@ -16,7 +16,7 @@ header {
 nav {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     border-width: 1px;
     border-style: solid;
@@ -27,12 +27,13 @@ nav {
 }
 
 #title-header {
+    margin-left: 10%;
     text-align: center;
     color: white;
 }
 
 #logos-header {
-    display: inline-block;
+    display: none;
 
 }
 

@@ -17,7 +17,10 @@ aside {
     }
 
     .search {
-        margin-top: 20%;
+        display: flex;
+        width: 14%;
+        margin-top: 50px;
+        margin-left: 3%;
         font-family: 'Roboto', sans-serif;
     }
 
