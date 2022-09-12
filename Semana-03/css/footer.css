@@ -1,0 +1,27 @@
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-top: 20%;
+    padding-bottom: 5%;
+    background-color: #DDDDE5;
+}
+
+footer p {
+    margin-left: 2%;
+}
+
+.footer-logo {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.logo-f {
+    width: 10%;
+    height: 10%;
+}

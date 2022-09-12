@@ -12,6 +12,7 @@ aside {
         justify-content: space-between;
         width: 16%;
         height: 100%;
+        top: 0px;
         z-index: 1;
         background-color: #373867;
     }
