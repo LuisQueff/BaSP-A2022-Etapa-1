@@ -18,8 +18,7 @@ aside {
     }
 
     .search {
-        display: flex;
-        width: 14%;
+        flex-basis: 14%;
         margin-top: 50px;
         margin-left: 3%;
         font-family: 'Roboto', sans-serif;
@@ -117,7 +116,7 @@ aside {
         flex-direction: column;
         justify-content: space-evenly;
         align-items: flex-start;
-        padding-left: 10%;
+        flex-wrap: wrap;
         color: white;
     }
 

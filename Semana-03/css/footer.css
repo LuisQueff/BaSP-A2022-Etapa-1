@@ -25,3 +25,18 @@ footer p {
     width: 10%;
     height: 10%;
 }
+
+@media only screen and (min-width: 1024px) {
+    footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 84%;
+        margin-left: 16%;
+        padding-top: 20%;
+        padding-bottom: 5%;
+        background-color: #DDDDE5;
+    }
+}

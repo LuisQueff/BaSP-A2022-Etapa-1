@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/reset.css">
+    <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="CSS/body.css">
     <link rel="stylesheet" href="CSS/header.css">
     <link rel="stylesheet" href="CSS/aside.css">
@@ -55,12 +56,12 @@
             </p>
         </article>
         <div class="info">
-        <ul>
-            <li><img src="assets/email.logo.png" alt="email logo"><a
-                    href=»trackgenix@gigatech.com»>trackgenix@gigatech.com</a></li>
-            <li><img src="assets/phone-icon.png" alt="phone logo"><a href="tel:858652585">+59899123456</a></li>
-            <li><img src="assets/addresse-icon.png" alt="addresse logo">Av. Montevideo 1234, 11200</li>
-        </ul>
+            <ul>
+                <li><img src="assets/email.logo.png" alt="email logo"><a
+                        href=»trackgenix@gigatech.com»>trackgenix@gigatech.com</a></li>
+                <li><img src="assets/phone-icon.png" alt="phone logo"><a href="tel:858652585">+59899123456</a></li>
+                <li><img src="assets/addresse-icon.png" alt="addresse logo">Av. Montevideo 1234, 11200</li>
+            </ul>
         </div>
         </p>
     </aside>
@@ -86,7 +87,8 @@
             </div>
             <div class="functionalities-content">
                 <article class="two-two">
-                    <img class="functionalities-logo" src="assets/clock.png" alt="clock logo">
+                    <img class="functionalities-logo" src="assets/clock.png" id="mobile-img" alt="clock logo">
+                    <img class="functionalities-logo" src="assets/clock-img.jpg" id="desktop-img" alt="clock logo">
                     <p class="text-twotwo">
                         Time Tracking Tool excepturi ut temporibus perferendis eum sunt dolorum eum esse voluptate
                         hic ullam aperiam et galisum ratione.Vel alias quod ut temporibus praesentium ut repudiandae
@@ -95,14 +97,16 @@
                     </p>
                 </article>
                 <article class="two-two2">
-                    <img class="functionalities-logo" src="assets/report.png" alt="report logo">
+                    <img class="functionalities-logo" src="assets/report.png" id="mobile-img" alt="report logo">
+                    <img class="functionalities-logo" src="assets/report-img.jpg" id="desktop-img" alt="report logo">
                     <p class="text-twotwo">
                         reports sit minus asperiores est fugit tempora et rerum velit qui expedita eveniet ut galisum
                         similique qui cumque neque. Qui voluptatem illo quo consequuntur maxime qui tempore quae!
                     </p>
                 </article>
                 <article class="two-two">
-                    <img class="functionalities-logo" src="assets/resource.png" alt="resource logo">
+                    <img class="functionalities-logo" src="assets/resource.png" id="mobile-img" alt="resource logo">
+                    <img class="functionalities-logo" src="assets/resouce-img.jpg" id="desktop-img" alt="resource logo">
                     <p class="text-twotwo">
                         Resource management quam et incidunt galisum et quia nisi sit dolor odit?
                         Nam nostrum velit sed omnis exercitationem et consequatur commodi eos distinctio inventore qui
@@ -110,7 +114,8 @@
                     </p>
                 </article>
                 <article class="two-two2">
-                    <img class="functionalities-logo" src="assets/multiple.png" alt="roles logo">
+                    <img class="functionalities-logo" src="assets/multiple.png" id="mobile-img" alt="roles logo">
+                    <img class="functionalities-logo" src="assets/multiple-img.jpg" id="desktop-img" alt="roles logo">
                     <p class="text-twotwo">
                         multiple roles odio qui nesciunt corporis aut voluptatem tenetur et eligendi illum ut
                         repellendus neque est inventore incidunt. Et galisum voluptates et omnis galisum qui
@@ -125,50 +130,52 @@
             <div id="why-tittle">
                 <h3>Why Trackgenix?</h3>
             </div>
-            <article class="vertical">
-                <img src="assets/productivity.png" alt="productivity logo" class="logo-why">
-                <p class="text-vertical">
-                    productivity booster odio qui nesciunt corporis aut voluptatem tenetur et eligendi illum ut
-                    repellendus neque est inventore incidunt. Et galisum voluptates et omnis galisum qui
-                    necessitatibus
-                    pariatur.
-                </p>
-            </article>
-            <article class="vertical-2">
-                <img src="assets/traceability.png" alt="work logo" class="logo-why">
-                <p class="text-vertical">
-                    work traceability Qui odio maiores et velit atque quo eveniet optio est distinctio
-                    blanditiis et sint alias est sint dolore. odio qui nesciunt corporis aut voluptatem tenetur et
-                    eligendi illum ut
-                    repellendus neque est inventore incidunt. Et galisum voluptates et omnis galisum qui
-                    necessitatibus
-                    pariatur.
-                </p>
-            </article>
-            <article class="vertical">
-                <img src="assets/leadership.png" alt="leadership logo" class="logo-why">
-                <p class="text-vertical">
-                    leadership and team management odio qui nesciunt corporis aut voluptatem tenetur et eligendi
-                    illum
-                    ut
-                    repellendus neque est inventore incidunt. Et galisum voluptates et omnis galisum qui
-                    necessitatibus
-                    pariatur
-                </p>
-            </article>
-            <article class="vertical-2">
-                <img src="assets/decision.png" alt="decision logo" class="logo-why">
-                <p class="text-vertical">
-                    decision making odio qui nesciunt corporis aut voluptatem tenetur et eligendi illum ut
-                    repellendus neque est inventore incidunt. Et galisum voluptates et omnis galisum qui
-                    necessitatibus
-                    pariatur.
-                </p>
-            </article>
+            <div>
+                <article class="vertical">
+                    <img src="assets/productivity.png" alt="productivity logo" class="logo-why">
+                    <p class="text-vertical">
+                        productivity booster odio qui nesciunt corporis aut voluptatem tenetur et eligendi illum ut
+                        repellendus neque est inventore incidunt. Et galisum voluptates et omnis galisum qui
+                        necessitatibus
+                        pariatur.
+                    </p>
+                </article>
+                <article class="vertical-2">
+                    <img src="assets/traceability.png" alt="work logo" class="logo-why">
+                    <p class="text-vertical">
+                        work traceability Qui odio maiores et velit atque quo eveniet optio est distinctio
+                        blanditiis et sint alias est sint dolore. odio qui nesciunt corporis aut voluptatem tenetur et
+                        eligendi illum ut
+                        repellendus neque est inventore incidunt. Et galisum voluptates et omnis galisum qui
+                        necessitatibus
+                        pariatur.
+                    </p>
+                </article>
+                <article class="vertical">
+                    <img src="assets/leadership.png" alt="leadership logo" class="logo-why">
+                    <p class="text-vertical">
+                        leadership and team management odio qui nesciunt corporis aut voluptatem tenetur et eligendi
+                        illum
+                        ut
+                        repellendus neque est inventore incidunt. Et galisum voluptates et omnis galisum qui
+                        necessitatibus
+                        pariatur
+                    </p>
+                </article>
+                <article class="vertical-2">
+                    <img src="assets/decision.png" alt="decision logo" class="logo-why">
+                    <p class="text-vertical">
+                        decision making odio qui nesciunt corporis aut voluptatem tenetur et eligendi illum ut
+                        repellendus neque est inventore incidunt. Et galisum voluptates et omnis galisum qui
+                        necessitatibus
+                        pariatur.
+                    </p>
+                </article>
+            </div>
         </section>
         <section class="hear">
-            <h3>We`d love to hear from you!</h3>
             <div class="hear-element1">
+                <h3>We`d love to hear from you!</h3>
                 <article class="hear-logo">
                     <img src="assets/letter-img.png" alt="letter logo">
                     <img src="assets/heart-img.png" alt="heart logo">
@@ -184,10 +191,10 @@
                         est voluptatem
                         pariatur non fugiat amet et quos earum aut omnis placeat.
                     </p>
-                    <h3>get in touch</h3>
                 </article>
             </div>
             <div class="hear-element2">
+                <h3>get in touch</h3>
                 <form>
                     <div class="imput-form">
                         name <input id="name-form" type="text">
