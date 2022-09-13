@@ -9,7 +9,6 @@ header {
     left: 0px;
     right: 0px;
     z-index: 1;
-    font-family: 'Roboto', sans-serif;
     background-color: #373867;
 }
 
@@ -48,11 +47,10 @@ nav {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        width: 84%;
+        width: 82%;
         height: 100px;
-        margin-left: 16%;
+        margin-left: 18%;
         z-index: 1;
-        font-family: 'Roboto', sans-serif;
         background-color: #373867;
     }
 
