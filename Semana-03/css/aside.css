@@ -2,7 +2,7 @@ aside {
     display: none;
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1024px) {
 
 
     aside {
