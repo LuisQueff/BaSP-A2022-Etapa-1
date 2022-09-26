@@ -10,9 +10,11 @@ window.onload= function(){
    
     function valEmail1() {
         if (emailRegex.test(email.value)) {
+            email.classList.add('ok');
             return true;
         } else {
-            email.classList.add('nemail');
+            email.classList.remove('ok');
+            email.classList.add('not');
             check1.innerText = 'insert a valid email';
             return false;
         }
@@ -20,10 +22,12 @@ window.onload= function(){
 
     function valEmail2() {
         if (emailRegex.test(email.value)) {
-            email.classList.remove('email');
+
         } else {
-            email.classList.remove('nemail');
+            email.classList.remove('ok');
+            email.classList.remove('not');
             check1.innerText = '';
+            return false;
         }
     };
 
@@ -33,9 +37,11 @@ window.onload= function(){
 
     function valpass1() {
         if (pass.value.length >= 8 && !isNaN(pass.value)) {
+            pass.classList.add('ok');
             return true;
         } else {
-            email.classList.add('nemail');
+            pass.classList.remove('ok');
+            pass.classList.add('not');
             check2.innerText = 'insert a valid password';
             return false;
         }
@@ -45,8 +51,10 @@ window.onload= function(){
         if (pass.value.length >= 8 && !isNaN(pass.value)) {
             return true;
         } else {
-            email.classList.remove('nemail');
+            pass.classList.remove('ok');
+            pass.classList.remove('not');
             check2.innerText = '';
+            return false;
         }
     };
 

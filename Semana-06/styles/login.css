@@ -35,7 +35,7 @@ form {
     height: 100%;
 }
 
-input[type=text]{
+input {
     width: 100%;
     margin: 2%;
     padding: 12px;
@@ -77,10 +77,25 @@ input[type=text]{
     float: right;
   }
 
-  #nemail {
-    border: 2px solid red;
+  .ok {
+    width: 100%;
+    margin: 2%;
+    padding: 12px;
+    border: 2px solid greenyellow;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
   }
 
+  .not {
+    width: 100%;
+    margin: 2%;
+    padding: 12px;
+    border: 2px solid red;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+  }
 
   @media only screen and (min-width: 1024px) {
     main {
