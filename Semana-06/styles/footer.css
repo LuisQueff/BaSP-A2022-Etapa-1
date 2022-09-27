@@ -34,9 +34,9 @@ footer p {
         justify-content: space-between;
         align-items: center;
         flex-wrap: wrap;
-        width: 82%;
+        width: 72%;
         margin-left: 18%;
-        padding-top: 20%;
+        padding: 5%;
         padding-bottom: 5%;
         background-color: #DDDDE5;
     }

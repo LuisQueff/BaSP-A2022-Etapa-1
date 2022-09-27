@@ -1,7 +1,7 @@
 window.onload = function () {
     var locality = document.getElementById("locality");
     var address = document.getElementById("address");
-    var phone = document.getElementById("tel");
+    var tel = document.getElementById("tel");
     var lastName = document.getElementById("last-name");
     var dni = document.getElementById("dni");
     var pCode = document.getElementById("pcode");
@@ -26,8 +26,8 @@ window.onload = function () {
     var number = "0123456789";
     var letter = " abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ";
     var index = address.value.indexOf(" ");
-    var dir1 = address.value.substring(0, index);
-    var dir2 = address.value.substring(index + 1, address.value.length);
+    var addr1 = address.value.substring(0, index);
+    var addr2 = address.value.substring(index + 1, address.value.length);
 
   /* Name */
 
@@ -148,8 +148,8 @@ window.onload = function () {
   /* Address */
 
     function dirNum1() {
-        for (var i = 0; i < dir1.value.length; i++) {
-            if (number.indexOf(dir1.value.charAt(i), 0) != -1) {
+        for (var i = 0; i < addr1.value.length; i++) {
+            if (number.indexOf(addr1.value.charAt(i), 0) != -1) {
                 return false;
             }
         }
@@ -157,8 +157,8 @@ window.onload = function () {
     };
 
     function dirLet1() {
-        for (var i = 0; i < dir1.value.length; i++) {
-            if (letter.indexOf(dir1.value.charAt(i), 0) != -1) {
+        for (var i = 0; i < addr1.value.length; i++) {
+            if (letter.indexOf(addr1.value.charAt(i), 0) != -1) {
                 return true;
             }
         }
@@ -166,7 +166,7 @@ window.onload = function () {
     };
 
     function dir1() {
-        if (dirNum1(true) && dirLet1(true) && dir1.value.length >= 5) {
+        if (dirNum1 && dirLet1 && addr1.value.length >= 5) {
             return true;
         } else {
             return false;
@@ -174,8 +174,8 @@ window.onload = function () {
     };
 
     function dirNum2() {
-        for (var i = 0; i < dir2.value.length; i++) {
-            if (number.indexOf(dir2.value.charAt(i), 0) != -1) {
+        for (var i = 0; i < addr2.value.length; i++) {
+            if (number.indexOf(addr2.value.charAt(i), 0) != -1) {
                 return true;
             }
         }
@@ -183,8 +183,8 @@ window.onload = function () {
     };
 
     function dirLet2() {
-        for (var i = 0; i < dir2.value.length; i++) {
-            if (letter.indexOf(dir2.value.charAt(i), 0) != -1) {
+        for (var i = 0; i < addr2.value.length; i++) {
+            if (letter.indexOf(addr2.value.charAt(i), 0) != -1) {
                 return false;
             }
         }
@@ -192,7 +192,7 @@ window.onload = function () {
     };
 
     function dir2() {
-        if (dirNum2(true) && dirLet2(true)) {
+        if (dirNum2 && dirLet2) {
             return true;
         } else {
             return false;
@@ -200,19 +200,17 @@ window.onload = function () {
     };
 
     function address1() {
-        if (dir1(true) && dir2(true)) {
-            direcion.classList.add("ok");
-            return true;
+        if (dir1 && dir2) {
+            address.classList.add("ok");
         } else {
             address.classList.remove("ok");
             address.classList.add("not");
             check6.innerText = "insert a valid address";
-            return false;
         }
     };
 
     function address2() {
-        if (dir1(true) && dir2(true)) {
+        if (dir1 && dir2) {
         } else {
             check6.innerText = "";
             address.classList.remove("ok");
@@ -228,12 +226,10 @@ window.onload = function () {
     function loc1() {
         if (locality.value.length > 3) {
             locality.classList.add("ok");
-            return true;
         } else {
             locality.classList.remove("ok");
             locality.classList.add("not");
             check7.innerText = "insert a valid locality";
-            return false;
         }
     };
 
@@ -243,7 +239,6 @@ window.onload = function () {
             locality.classList.remove("ok");
             locality.classList.remove("not");
             check7.innerText = "";
-            return false;
         }
     };
 
@@ -283,7 +278,7 @@ window.onload = function () {
         } else {
             email.classList.remove("ok");
             email.classList.add("not");
-            check7.innerText = "insert a valid locality";
+            check9.innerText = "insert a valid email";
             return false;
         }
     };
@@ -304,7 +299,7 @@ window.onload = function () {
             }
         }
         return false;
-    };
+    }
 
     function valLet() {
         for (var i = 0; i < pass.value.length; i++) {
@@ -313,29 +308,26 @@ window.onload = function () {
             }
         }
         return false;
-    };
+    }
 
     function valPass1() {
-        if (pass.value.length >= 8 && valNum(true) && valLet(true)) {
+        if (pass.value.length >= 8 && valNum && valLet) {
             pass.classList.add("ok");
-            return true;
         } else {
             pass.classList.remove("ok");
             pass.classList.add("not");
             check10.innerText = "insert a valid password";
-            return false;
         }
-    };
+    }
 
     function valPass2() {
-        if (pass.value.length >= 8 && valNum(true) && valLet(true)) {
+        if (pass.value.length >= 8 && valNum && valLet) {
         } else {
             pass.classList.remove("ok");
             pass.classList.remove("not");
             check10.innerText = "";
-            return false;
         }
-    };
+    }
 
     pass.addEventListener("blur", valPass1);
     pass.addEventListener("focus", valPass2);
@@ -361,38 +353,25 @@ window.onload = function () {
     };
 
     function valPass3() {
-        if (rpass.value.length >= 8 && valNumR(true) && valLetR(true) && rpass.value === pass.value) {
+        if (rpass.value.length >= 8 && valNumR && valLetR && rpass.value == pass.value) {
             rpass.classList.add("ok");
-            return true;
         } else {
             rpass.classList.remove("ok");
-    pass.classList.add("not");
-            check11.innerText = "insert a valid password";
-            return false;
+            rpass.classList.add("not");
+            check11.innerText = "insert a valid password111";
         }
     };
 
     function valPass4() {
-        if (rpass.value.length >= 8 && valNum(true) && valLet(true) && rpass.value === pass.value) {
+        if (rpass.value.length >= 8 && valNum && valLet && rpass.value == pass.value) {
         } else {
             rpass.classList.remove("ok");
             rpass.classList.remove("not");
             check11.innerText = "";
-            return false;
         }
     };
 
-    pass.addEventListener("blur", valPass3);
-    pass.addEventListener("focus", valPass4);
+    rpass.addEventListener("blur", valPass3);
+    rpass.addEventListener("focus", valPass4);
 
-  function valSubmit(e) {
-    e.preventDefault();
-    if (valEmail1(true) && valpass1(true)) {
-      alert("Email:" + " " + email.value + " " + "Password:" + "" + pass.value);
-    } else {
-      alert("ERROR: email or passwor invalid");
-    }
-  }
-
-  button.addEventListener("click", valSubmit);
 };
