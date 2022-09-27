@@ -1,179 +1,191 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/sign-up.css">
-    <link rel="stylesheet" href="../styles/reset.css">
-    <link rel="stylesheet" href="../styles/style.css">
-    <link rel="stylesheet" href="../styles/body.css">
-    <link rel="stylesheet" href="../styles/header.css">
-    <link rel="stylesheet" href="../styles/aside.css">
-    <link rel="stylesheet" href="../styles/footer.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/sign-up.css" />
+    <link rel="stylesheet" href="../styles/reset.css" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/body.css" />
+    <link rel="stylesheet" href="../styles/header.css" />
+    <link rel="stylesheet" href="../styles/aside.css" />
+    <link rel="stylesheet" href="../styles/footer.css" />
     <script src="../javascript/employee-signup.js"></script>
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/styles2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-     --><title>Document</title>
-</head>
-<body>
+    <title>Document</title>
+  </head>
+  <body>
     <header>
-        <nav>
-            <div class="hamburguer">
-                <span>&#9776;</span>
-            </div>
-            <p id="title-header">TRACKGENIX</p>
-            <div id="logos-header">
-                <img src="../assets/twitter.png" alt="twiter logo">
-                <img src="../assets/facebook.png" alt="facebook logo">
-                <img src="../assets/instagram.png" alt="instagram logo">
-                <img src="../assets/linkedin.png" alt="linkedin logo">
-            </div>
-        </nav>
+      <nav>
+        <div class="hamburguer">
+          <span>&#9776;</span>
+        </div>
+        <p id="title-header">TRACKGENIX</p>
+        <div id="logos-header">
+          <img src="../assets/twitter.png" alt="twiter logo" />
+          <img src="../assets/facebook.png" alt="facebook logo" />
+          <img src="../assets/instagram.png" alt="instagram logo" />
+          <img src="../assets/linkedin.png" alt="linkedin logo" />
+        </div>
+      </nav>
     </header>
     <aside>
-        <input type="search" placeholder="Search" class="search">
-        <div class="menu-sidebar">
-            <p id="menu">
-                Menu
-            </p>
-            <a id="home" href="landing.html">home</a>
-            <a id="singup" href="employee-signup.html">singup</a>
-            <a id="login" href="login.html">login</a>
-            <a id="contact" href="http://">contact info</a>
-        </div>
-        <article class="paragraph-sidebar">
-            <p id="get">
-                Get in touch
-            </p>
-            <p id="text-sidebar">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-            </p>
-        </article>
-        <div class="info">
-            <img src="../assets/email.logo.png" alt="email logo">
-            <a href=»trackgenix@gigatech.com»>trackgenix@gigatech.com</a>
-            <img src="../assets/phone-icon.png" alt="phone logo"><a href="tel:858652585">+59899123456</a>
-            <img src="../assets/addresse-icon.png" alt="addresse logo">Av. Montevideo 1234, 11200
-        </div>
+      <input type="search" placeholder="Search" class="search" />
+      <div class="menu-sidebar">
+        <p id="menu">Menu</p>
+        <a id="home" href="landing.html">home</a>
+        <a id="singup" href="employee-signup.html">singup</a>
+        <a id="login" href="login.html">login</a>
+        <a id="contact" href="http://">contact info</a>
+      </div>
+      <article class="paragraph-sidebar">
+        <p id="get">Get in touch</p>
+        <p id="text-sidebar">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco
+        </p>
+      </article>
+      <div class="info">
+        <img src="../assets/email.logo.png" alt="email logo" />
+        <a href="»trackgenix@gigatech.com»">trackgenix@gigatech.com</a>
+        <img src="../assets/phone-icon.png" alt="phone logo" /><a
+          href="tel:858652585"
+          >+59899123456</a
+        >
+        <img src="../assets/addresse-icon.png" alt="addresse logo" />Av.
+        Montevideo 1234, 11200
+      </div>
     </aside>
     <main>
-        <h1>Login</h1>
-            <form>
-                <fieldset class="nombre">
-                    <div class="col-25">
-                        <label for="nombre">Nombre</label> 
-                    </div>
-                    <div class="col-75">
-                        <input type="text" name="nombre" id="nombre" required>
-                    </div>
-                    <span id="check1"></span>
-                </fieldset>
-                <fieldset class="apellido">
-                    <div class="col-25">
-                        <label for="apellido">Apellido</label>
-                    </div>
-                    <div class="col-75">
-                        <input type="text" name="apellido" id="apellido">
-                    </div>
-                    <span id="check2"></span>
-                </fieldset>
-                <fieldset class="dni">
-                    <div class="col-25">
-                        <label for="dni">DNI</label> 
-                    </div>
-                    <div class="col-75">
-                        <input type="text" name="dni" id="dni" required>
-                    </div>
-                    <span id="check3"></span>
-                </fieldset>
-                <fieldset class="fnacimiento">
-                    <div class="col-25">
-                        <label for="fnacimiento">Apellido</label>
-                    </div>
-                    <div class="col-75">
-                        <input type="date" name="fnacimiento" id="fnacimiento">
-                    </div>
-                    <span id="check4"></span>
-                </fieldset>
-                <fieldset class="telefono">
-                    <div class="col-25">
-                        <label for="telefono">Telefono</label> 
-                    </div>
-                    <div class="col-75">
-                        <input type="text" name="telefono" id="tel" required>
-                    </div>
-                    <span id="check5"></span>
-                </fieldset>
-                <fieldset class="direccion">
-                    <div class="col-25">
-                        <label for="direccion">Direccion</label>
-                    </div>
-                    <div class="col-75">
-                        <input type="text" name="direccion" id="direccion">
-                    </div>
-                    <span id="check6"></span>
-                </fieldset>
-                <fieldset class="localidad">
-                    <div class="col-25">
-                        <label for="localidad">Localidad</label> 
-                    </div>
-                    <div class="col-75">
-                        <input type="text" name="localidad" id="localidad" required>
-                    </div>
-                    <span id="check7"></span>
-                </fieldset>
-                <fieldset class="codigo-postal">
-                    <div class="col-25">
-                        <label for="cpostal">Codigo postal</label>
-                    </div>
-                    <div class="col-75">
-                        <input type="text" name="cpostal" id="cpostal">
-                    </div>
-                    <span id="check8"></span>
-                </fieldset>
-                <fieldset class="email">
-                    <div class="col-25">
-                        <label for="email">Email</label> 
-                    </div>
-                    <div class="col-75">
-                        <input type="text" name="email" id="email" required>
-                    </div>
-                    <span id="check9"></span>
-                </fieldset>
-                <fieldset class="contraseña">
-                    <div class="col-25">
-                        <label for="contraseña">Contraseña</label>
-                    </div>
-                    <div class="col-75">
-                        <input type="text" name="contraseña" id="pass">
-                    </div>
-                    <span id="check10"></span>
-                </fieldset>
-                <fieldset class="rcontraseña">
-                    <div class="col-25">
-                        <label for="rcontraseña">Repetir contraseña</label> 
-                    </div>
-                    <div class="col-75">
-                        <input type="text" name="rcontraseña" id="rpass" required>
-                    </div>
-                    <span id="check11"></span>
-                </fieldset>
-                <button type="submit" id="create-button">Create</button>
-            </form>
+      <h1>Login</h1>
+      <form>
+        <fieldset class="name">
+          <div class="col-25">
+            <label for="name">Name</label>
+          </div>
+          <div class="col-75">
+            <input type="text" name="name" id="name" required />
+          </div>
+          <span id="check1"></span>
+        </fieldset>
+        <fieldset class="last-name">
+          <div class="col-25">
+            <label for="last-name">Last-name</label>
+          </div>
+          <div class="col-75">
+            <input type="text" name="last-name" id="last-name" required />
+          </div>
+          <span id="check2"></span>
+        </fieldset>
+        <fieldset class="dni">
+          <div class="col-25">
+            <label for="dni">DNI</label>
+          </div>
+          <div class="col-75">
+            <input type="text" name="dni" id="dni" required />
+          </div>
+          <span id="check3"></span>
+        </fieldset>
+        <fieldset class="date">
+          <div class="col-25">
+            <label for="date">Birth date</label>
+          </div>
+          <div class="col-75">
+            <input type="date" name="date" id="date" required />
+          </div>
+          <span id="check4"></span>
+        </fieldset>
+        <fieldset class="phone">
+          <div class="col-25">
+            <label for="phone">phone</label>
+          </div>
+          <div class="col-75">
+            <input type="text" name="phone" id="tel" required />
+          </div>
+          <span id="check5"></span>
+        </fieldset>
+        <fieldset class="address">
+          <div class="col-25">
+            <label for="address">Address</label>
+          </div>
+          <div class="col-75">
+            <input type="text" name="address" id="address" required />
+          </div>
+          <span id="check6"></span>
+        </fieldset>
+        <fieldset class="locality">
+          <div class="col-25">
+            <label for="locality">locality</label>
+          </div>
+          <div class="col-75">
+            <input type="text" name="locality" id="locality" required />
+          </div>
+          <span id="check7"></span>
+        </fieldset>
+        <fieldset class="postal-code">
+          <div class="col-25">
+            <label for="pcode">Postal code</label>
+          </div>
+          <div class="col-75">
+            <input type="text" name="pcode" id="pcode" required />
+          </div>
+          <span id="check8"></span>
+        </fieldset>
+        <fieldset class="email">
+          <div class="col-25">
+            <label for="email">Email</label>
+          </div>
+          <div class="col-75">
+            <input type="text" name="email" id="email" required />
+          </div>
+          <span id="check9"></span>
+        </fieldset>
+        <fieldset class="pass">
+          <div class="col-25">
+            <label for="pass">Password</label>
+          </div>
+          <div class="col-75">
+            <input type="text" name="pass" id="pass" required />
+          </div>
+          <span id="check10"></span>
+        </fieldset>
+        <fieldset class="rpass">
+          <div class="col-25">
+            <label for="rpass">Repeat password</label>
+          </div>
+          <div class="col-75">
+            <input type="text" name="rpass" id="rpass" required />
+          </div>
+          <span id="check11"></span>
+        </fieldset>
+        <button type="submit" id="create-button">Create</button>
+      </form>
     </main>
     <footer>
-        <p>
-            © 2022, Trackgenix
-        </p>
-        <div class="footer-logo">
-            <img src="../assets/twitter-logo.png" alt="twiter logo" class="logo-f">
-            <img src="../assets/facebook-logo.png" alt="facebook logo" class="logo-f">
-            <img src="../assets/instagram-logo.png" alt="instagram logo" class="logo-f">
-            <img src="../assets/linkedin-logo.png" alt="linkedin logo" class="logo-f">
-            <img src="../assets/github-logo.png" alt="github logo" class="logo-f">
-        </div>
+      <p>© 2022, Trackgenix</p>
+      <div class="footer-logo">
+        <img
+          src="../assets/twitter-logo.png"
+          alt="twiter logo"
+          class="logo-f"
+        />
+        <img
+          src="../assets/facebook-logo.png"
+          alt="facebook logo"
+          class="logo-f"
+        />
+        <img
+          src="../assets/instagram-logo.png"
+          alt="instagram logo"
+          class="logo-f"
+        />
+        <img
+          src="../assets/linkedin-logo.png"
+          alt="linkedin logo"
+          class="logo-f"
+        />
+        <img src="../assets/github-logo.png" alt="github logo" class="logo-f" />
+      </div>
     </footer>
-</body>
+  </body>
 </html>
