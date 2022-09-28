@@ -14,10 +14,17 @@ create diferents css files for the header, aside, main, footer and body elements
 set the media querys for the tablet and desktop resolution.
 ## Week 04:
 created a new index.html file with 6 javascript files where i solve several problems.
+## Week 06:
+The login and signup pages are created, they are connected to the landing page and all 
+the logic is developed in javascript to validate the required fields following the 
+specifications document.
 
 https://luisqueff.github.io/BaSP-A2022-Etapa-1/Semana-03/index.html
 
 https://luisqueff.github.io/BaSP-A2022-Etapa-1/Semana-04/index.html
+
+https://luisqueff.github.io/BaSP-A2022-Etapa-1/Semana-06/index.html
+
 ## Autor
 
 Luis Queffelec.

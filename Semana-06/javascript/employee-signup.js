@@ -272,7 +272,7 @@ window.onload = function () {
   /* Email */
 
     function email1() {
-        if (emailRegex.test(email.value) || email.value <= 0) {
+        if (emailRegex.test(email.value)) {
             email.classList.add("ok");
             return true;
         } else {
@@ -284,6 +284,8 @@ window.onload = function () {
     };
 
     function email2() {
+        email.classList.remove("ok");
+        email.classList.remove("not");
         check9.innerText = "";
     };
 
@@ -358,7 +360,7 @@ window.onload = function () {
         } else {
             rpass.classList.remove("ok");
             rpass.classList.add("not");
-            check11.innerText = "insert a valid password111";
+            check11.innerText = "insert a valid password";
         }
     };
 
@@ -374,4 +376,22 @@ window.onload = function () {
     rpass.addEventListener("blur", valPass3);
     rpass.addEventListener("focus", valPass4);
 
+    /* BUTTON */
+
+    function valSubmit(e) {
+        e.preventDefault();
+        if ((name1 && lastName1 && dni1 && tel1 && loc1 && pCode1 && email1 && valPass1 && valPass3) && 
+            (name.value.length !=0 && lastName.value.length !=0 && dni.value.length !=0 && tel.value.length
+                 !=0 && locality.value.length !=0 && pCode.value.length !=0 && email.value.length !=0 && 
+                 pass.value.length !=0 && rpass.value.length !=0)) {
+            alert('Name:'+ name.value + ' ' + 'Lastname:'+ lastName.value + ' ' + 'DNI:'+ dni.value
+             + ' ' + 'Phone:'+ tel.value + ' ' + 'Location:'+ locality.value + ' ' + 'Postal Code:'+ pCode.value
+              + ' ' + 'Email:'+ email.value + ' ' + 'Password:'+ pass.value + '   ' + 'User created successfully');
+        } else {
+            alert("ERROR: one o more inputs are invalid");
+        }
+    }
+
+    button.addEventListener("click", valSubmit);
+ tel.onsubmit
 };
