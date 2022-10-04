@@ -26,9 +26,7 @@ window.onload = function () {
     var button = document.getElementById('create-button');
     var number = '0123456789';
     var letter = ' abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ';
-    var index = address.value.indexOf(' ');
-    var addr1 = address.value.substring(0, index);
-    var addr2 = address.value.substring(index + 1, address.value.length);
+    var numberLetterSpace = 'abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ0123456789 ';
 
 
   /* Name */
@@ -40,7 +38,7 @@ window.onload = function () {
             }
         }
         return true;
-    }
+    };
 
     function name1() {
         if (name.value.length > 3 && valNum1(true)) {
@@ -52,7 +50,7 @@ window.onload = function () {
             check1.innerText = 'insert a valid name';
             return false;
         }
-    }
+    };
 
     function name2() {
         if (name.value.length > 3 && valNum1(true)) {
@@ -61,7 +59,7 @@ window.onload = function () {
             name.classList.remove('ok');
             name.classList.remove('not');
         }
-    }
+    };
 
     name.addEventListener('blur', name1);
     name.addEventListener('focus', name2);
@@ -182,75 +180,48 @@ window.onload = function () {
 
   /* Address */
 
-    function dirNum1() {
-        for (var i = 0; i < addr1.value.length; i++) {
-            if (number.indexOf(addr1.value.charAt(i), 0) != -1) {
+    function validateAddress() {
+        var arrayNum = [];
+        var arrayAbc = [];
+        for (let i = 0; i < address.value.length; i++) {
+            if(!numberLetterSpace.includes(address.value[i])) {
                 return false;
             }
-        }
-        return true;
-    };
-
-    function dirLet1() {
-        for (var i = 0; i < addr1.value.length; i++) {
-            if (letter.indexOf(addr1.value.charAt(i), 0) != -1) {
-                return true;
+            if(number.includes(address.value[i])) {
+                arrayNum.push(address.value[i]);
+            }
+            if(letter.includes(address.value[i])) {
+                arrayAbc.push(address.value[i]);
             }
         }
-        return false;
-    };
-
-    function dir1() {
-        if (dirNum1 && dirLet1 && addr1.value.length >= 5) {
-            return true;
-        } else {
+        if(address.value.length < 5) {
             return false;
         }
-    };
-
-    function dirNum2() {
-        for (var i = 0; i < addr2.value.length; i++) {
-            if (number.indexOf(addr2.value.charAt(i), 0) != -1) {
-                return true;
-            }
-        }
-        return false;
-    };
-
-    function dirLet2() {
-        for (var i = 0; i < addr2.value.length; i++) {
-            if (letter.indexOf(addr2.value.charAt(i), 0) != -1) {
-                return false;
-            }
-        }
-        return true;
-    };
-
-    function dir2() {
-        if (dirNum2 && dirLet2) {
-            return true;
-        } else {
+        if(arrayAbc.length === 0 || arrayNum.length === 0) {
             return false;
         }
-    };
+        var addresSplit = address.value.split(' ');
+        if(!addresSplit[0] || !addresSplit[1]) {
+            return false;
+        }
+        return true;
+    }
 
     function address1() {
-        if (dir1 && dir2) {
-            address.classList.add('ok');
-        } else {
+        if(!validateAddress()) {
             address.classList.remove('ok');
             address.classList.add('not');
             check6.innerText = 'insert a valid address';
         }
+        if(validateAddress()) {
+            address.classList.add('ok');
+        }
     };
 
     function address2() {
-        if (dir1 && dir2) {
-        } else {
-            check6.innerText = '';
-            address.classList.remove('ok');
-            address.classList.remove('not');
-            }
+        address.classList.remove('ok');
+        address.classList.remove('not');
+        check6.innerText = '';
     };
 
     address.addEventListener('blur', address1);
@@ -415,6 +386,8 @@ window.onload = function () {
 
     function valSubmit(e) {
         e.preventDefault();
+
+        console.log(addr1, addr2, 'jhgfds')
         var dob = date.value;
         var dateSplit = dob.split('-');
         dob = dateSplit[1] + '/'+dateSplit[2]+ '/' + dateSplit[0];
@@ -428,7 +401,8 @@ window.onload = function () {
         + '&zip=' + pCode.value
         + '&email=' + email.value
         + '&password=' + pass.value;
-        if ((name1 && lastName1 && dni1 && date1 && tel1 && loc1 && pCode1 && email1 && valPass1 && valPass3) &&
+        if ((name1 && lastName1 && dni1 && date1 && tel1 && address1 && loc1
+            && pCode1 && email1 && valPass1 && valPass3) &&
              (name.value.length !=0 && lastName.value.length !=0 && dni.value.length !=0 && tel.value.length
                  !=0 && locality.value.length !=0 && pCode.value.length !=0 && email.value.length !=0 &&
                   pass.value.length !=0 && rpass.value.length !=0)) {
@@ -450,10 +424,11 @@ window.onload = function () {
                         localStorage.setItem('Postalcode', pCode.value);
                         localStorage.setItem('Email', email.value);
                         localStorage.setItem('Password', pass.value);
-                        alert('Msg: ' + data.msg + '\nName: ' + name.value + '\nLast Name: ' + lastName.value + '\nDNI: ' + dni.value
-                        + '\nDate: ' + date.value + '\nPhone: ' + tel.value + '\nAddress: ' + address.value
-                        + '\nLocation: ' + locality.value + '\nPostal Code: ' + pCode.value + '\nEmail: ' + email.value
-                        + '\nPassword: ' + pass.value + '\nRepeat Password: ' + rpass.value);
+                        alert('Msg: ' + data.msg + '\nName: ' + name.value + '\nLast Name: ' + lastName.value
+                        + '\nDNI: ' + dni.value + '\nDate: ' + date.value + '\nPhone: ' + tel.value
+                        + '\nAddress: ' + address.value + '\nLocation: ' + locality.value + '\nPostal Code: '
+                        + pCode.value + '\nEmail: ' + email.value + '\nPassword: ' + pass.value
+                        + '\nRepeat Password: ' + rpass.value);
                     }
                 })
                 .catch(function(error) {

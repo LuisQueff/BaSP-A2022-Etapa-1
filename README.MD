@@ -26,9 +26,9 @@ https://luisqueff.github.io/BaSP-A2022-Etapa-1/Semana-03/index.html
 
 https://luisqueff.github.io/BaSP-A2022-Etapa-1/Semana-04/index.html
 
-https://luisqueff.github.io/BaSP-A2022-Etapa-1/Semana-06/landing.html
+https://luisqueff.github.io/BaSP-A2022-Etapa-1/Semana-06/views/landing.html
 
-https://luisqueff.github.io/BaSP-A2022-Etapa-1/Semana-07/landing.html
+https://luisqueff.github.io/BaSP-A2022-Etapa-1/Semana-07/views/landing.html
 
 ## Autor
 

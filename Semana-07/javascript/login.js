@@ -96,8 +96,12 @@ window.onload = function () {
         return res.json();
       })
       .then(function(data) {
-        alert('Msg: ' + data.msg + '\nEmail: ' + email.value + '\nPassword: ' + pass.value);
-        console.log(data)
+        if (!data.success) {
+          throw new error('Error: bad request');
+        } else {
+          alert('Msg: ' + data.msg + '\nEmail: ' + email.value + '\nPassword: ' + pass.value);
+          console.log(data)
+        }
       })
       .catch(function(error) {
         alert(error);
