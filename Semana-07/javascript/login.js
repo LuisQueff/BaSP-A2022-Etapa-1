@@ -89,12 +89,14 @@ window.onload = function () {
   /* BUTTON */
 
   close.onclick = function() {
-    modal.style.display = "none";
+    modal.classList.remove('modalIn');
+    modal.classList.add('modalout');
   };
 
   window.onclick = function(event) {
     if (event.target == modal) {
-      modal.style.display = "none";
+      modal.classList.remove('modalIn');
+      modal.classList.add('modalOut');
     }
   };
 

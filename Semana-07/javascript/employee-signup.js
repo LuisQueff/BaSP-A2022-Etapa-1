@@ -459,13 +459,15 @@ window.onload = function () {
     pass.value = localStorage.getItem('Password');
 
     close.onclick = function() {
-        modal.style.display = "none";
-    };
+        modal.classList.remove('modalIn');
+        modal.classList.add('modalout');
+      };
 
-    window.onclick = function(event) {
+      window.onclick = function(event) {
         if (event.target == modal) {
-          modal.style.display = "none";
+          modal.classList.remove('modalIn');
+          modal.classList.add('modalOut');
         }
-    };
+      };
 
 };
