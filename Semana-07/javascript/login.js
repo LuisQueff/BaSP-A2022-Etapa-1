@@ -124,8 +124,8 @@ window.onload = function () {
         }
       })
       .catch(function(error) {
-        modal.style.display = "block";
-        txtModal.innerText = error;
+        modal.classList.add('modalIn');
+        txtModal.innerText = 'Error: email or password invalid';
       })
     }
   })
