@@ -7,6 +7,11 @@ window.onload = function () {
   var button = document.getElementById("login-button");
   var numeros = "0123456789";
   var letras = "abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ";
+  var modal = document.getElementById("myModal");
+  var close = document.getElementsByClassName("close")[0];
+  var txtModal = document.getElementById('txtspan')
+  modal.classList.add('modalOut');
+  txtModal.innerText = '';
 
   /* EMAIL */
   function valEmail1() {
@@ -83,12 +88,24 @@ window.onload = function () {
 
   /* BUTTON */
 
+  close.onclick = function() {
+    modal.style.display = "none";
+  };
+
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  };
+
   button.addEventListener('click', function(e) {
     e.preventDefault();
     if (!valEmail1()) {
-      alert('ERROR: email invalid');
+      modal.classList.add('modalIn');
+      txtModal.innerText = 'ERROR: email invalid';
     } else if (!valPass1()) {
-      alert('ERROR: password invalid');
+      modal.classList.add('modalIn');
+      txtModal.innerText = 'ERROR: password invalid';
     } else {
     var url = 'https://basp-m2022-api-rest-server.herokuapp.com/login?email=' + email.value + '&password=' + pass.value;
     fetch(url)
@@ -99,12 +116,14 @@ window.onload = function () {
         if (!data.success) {
           throw new error('Error: bad request');
         } else {
-          alert('Msg: ' + data.msg + '\nEmail: ' + email.value + '\nPassword: ' + pass.value);
+          modal.classList.add('modalIn');
+          txtModal.innerText = 'Msg: ' + data.msg + '\nEmail: ' + email.value + '\nPassword: ' + pass.value;
           console.log(data)
         }
       })
       .catch(function(error) {
-        alert(error);
+        modal.style.display = "block";
+        txtModal.innerText = error;
       })
     }
   })

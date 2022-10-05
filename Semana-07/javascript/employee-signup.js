@@ -27,6 +27,11 @@ window.onload = function () {
     var number = '0123456789';
     var letter = ' abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ';
     var numberLetterSpace = 'abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ0123456789 ';
+    var modal = document.getElementById("myModal");
+    var close = document.getElementsByClassName("close")[0];
+    var txtModal = document.getElementById('txtspan')
+    modal.classList.add('modalOut');
+    txtModal.innerText = '';
 
 
   /* Name */
@@ -386,8 +391,6 @@ window.onload = function () {
 
     function valSubmit(e) {
         e.preventDefault();
-
-        console.log(addr1, addr2, 'jhgfds')
         var dob = date.value;
         var dateSplit = dob.split('-');
         dob = dateSplit[1] + '/'+dateSplit[2]+ '/' + dateSplit[0];
@@ -424,18 +427,21 @@ window.onload = function () {
                         localStorage.setItem('Postalcode', pCode.value);
                         localStorage.setItem('Email', email.value);
                         localStorage.setItem('Password', pass.value);
-                        alert('Msg: ' + data.msg + '\nName: ' + name.value + '\nLast Name: ' + lastName.value
+                        modal.classList.add('modalIn');
+                        txtModal.innerText = 'Msg: ' + data.msg + '\nName: ' + name.value + '\nLast Name: ' + lastName.value
                         + '\nDNI: ' + dni.value + '\nDate: ' + date.value + '\nPhone: ' + tel.value
                         + '\nAddress: ' + address.value + '\nLocation: ' + locality.value + '\nPostal Code: '
                         + pCode.value + '\nEmail: ' + email.value + '\nPassword: ' + pass.value
-                        + '\nRepeat Password: ' + rpass.value);
+                        + '\nRepeat Password: ' + rpass.value;
                     }
                 })
                 .catch(function(error) {
-                    alert('Error: ' + error);
+                    modal.classList.add('modalIn');
+                    txtModal.innerText = 'Error: ' + error;
                 });
         } else {
-            alert('ERROR: one o more inputs are invalid');
+            modal.classList.add('modalIn');
+            txtModal.innerText = 'ERROR: one o more inputs are invalid';
         }
     };
 
@@ -451,4 +457,15 @@ window.onload = function () {
     pCode.value = localStorage.getItem('Postalcode');
     email.value = localStorage.getItem('Email');
     pass.value = localStorage.getItem('Password');
+
+    close.onclick = function() {
+        modal.style.display = "none";
+    };
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+    };
+
 };
