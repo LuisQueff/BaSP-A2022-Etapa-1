@@ -90,7 +90,7 @@ window.onload = function () {
 
   close.onclick = function() {
     modal.classList.remove('modalIn');
-    modal.classList.add('modalout');
+    modal.classList.add('modalOut');
   };
 
   window.onclick = function(event) {
